@@ -24,6 +24,4 @@ instance.interceptors.response.use(response => {
   return Promise.reject(error)
 })
 
-console.log(typeof(instance))
-
 export default instance
