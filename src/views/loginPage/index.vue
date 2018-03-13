@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='login-container'>
     <el-container>
       <el-header>
         <img src="../../assets/images/logo.jpg" height="50" alt="logo图片">
@@ -21,7 +21,7 @@
         </el-form>
       </el-main>
       <el-footer>
-        <p>XXXX后台管理系统 @copyright 2017</p>
+        XXXX后台管理系统 @copyright 2017
       </el-footer>
     </el-container>
   </div>
@@ -58,3 +58,30 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .login-container {
+    height: 100%;
+    .el-header>img {
+      padding: 5px;
+    }
+    .el-main {
+      position: relative;
+      padding: 0;
+      background: url('../../assets/images/background.png') no-repeat;
+      background-size: 100% 100%;
+      .el-form {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 400px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.7);
+      }
+    }
+    .el-footer {
+      text-align: center;
+      line-height: 3.75;
+    }
+  }
+</style>

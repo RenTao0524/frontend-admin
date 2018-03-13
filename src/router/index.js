@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import HelloWorld from '@/views/layout/layout.vue'
 import LoginPage from '@/views/loginPage/index.vue'
+import userManagementPage from '@/views/systemManagement/user/index.vue'
+import roleManagementPage from '@/views/systemManagement/role/index.vue'
+import permissionManagementPage from '@/views/systemManagement/permission/index.vue'
 
 Vue.use(Router)
 
@@ -21,7 +24,13 @@ export default new Router({
     {
       path: '/homePage',
       name: 'homePage',
-      component: HelloWorld
+      component: HelloWorld,
+      children: [
+        { path: '/', component: LoginPage },
+        { path: 'userManagementPage', component: userManagementPage },
+        { path: 'roleManagementPage', component: roleManagementPage },
+        { path: 'permissionManagementPage', component: permissionManagementPage }
+      ]
     }
   ]
 })
