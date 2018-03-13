@@ -1,0 +1,25 @@
+
+.el-header {
+  padding: 0px 10px;
+}
+
+.el-main {
+  padding: 0px 10px;
+}
+
+.el-form--inline .el-form-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.el-table {
+  .el-table__header-wrapper {
+    table {
+      th {
+        background-color: #eef1f6;
+        color: black;
+        font-size: 14px;
+      }
+    }
+  }
+}
