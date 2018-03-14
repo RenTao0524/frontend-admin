@@ -18,7 +18,8 @@
       </el-form-item>
     </el-form>
 
-    <el-table :data="tableData" stripe border style="width: 100%" max-height="450" size="small">
+    <el-table v-loading="loading" element-loading-text="拼命加载中" :data="tableData" stripe border style="width: 100%"
+    :max-height="maxHeight" size="small">
       <el-table-column prop="userLoginName" label="用户登入名" min-width="150" align="center">
       </el-table-column>
       <el-table-column prop="userName" label="用户名" min-width="100" align="center">
@@ -75,16 +76,28 @@ export default {
         userLoginName: '',
         userName: ''
       },
-      tableData: []
+      tableData: [],
+      loading: true
+      // maxHeight: ''
     }
   },
   created () {
-    getUserInfo(this.queryList).then(res => {
-      console.log(res)
-      this.tableData = res.data
-    })
+    this.fetchData()
+  },
+  computed: {
+    maxHeight: function () {
+      return window.innerHeight - 60 - 60 - 48
+    }
   },
   methods: {
+    fetchData () {
+      this.loading = true
+      getUserInfo(this.queryList).then(res => {
+        console.log(res)
+        this.tableData = res.data
+        this.loading = false
+      })
+    },
     hanleSearch () {
       console.log(this.queryList)
     },
