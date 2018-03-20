@@ -19,6 +19,8 @@ for (let i = 0; i < count; i++) {
     'userState|1': ['00', '01']
   }))
 }
+
+export const name = 'admin'
 export default {
   getUserInfo: () => {
     return userInfoList

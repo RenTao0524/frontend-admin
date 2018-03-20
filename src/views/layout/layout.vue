@@ -39,11 +39,11 @@ export default {
           children: [
             {
               name: '运营推荐位',
-              path: '1-1'
+              path: '/layout/recommendPage'
             },
             {
               name: '权益产品',
-              path: '1-2'
+              path: '/layout/equityPage'
             }
           ]
         },
@@ -53,15 +53,15 @@ export default {
           children: [
             {
               name: '会员列表',
-              path: '2-1'
+              path: '/layout/memberListPage'
             },
             {
               name: '导入数据',
-              path: '2-2'
+              path: '/layout/memberImportDataPage'
             },
             {
               name: '导入日志',
-              path: '2-3'
+              path: '/layout/memberImportLogPage'
             }
           ]
         },
@@ -71,17 +71,17 @@ export default {
           children: [
             {
               name: '欧点统计',
-              path: '3-1'
+              path: '/layout/oPointStatisticsPage'
             },
             {
               name: '欧点导入日志',
-              path: '3-2'
+              path: '/layout/oPointImportPage'
             }
           ]
         },
         {
           name: '消息管理',
-          path: '4'
+          path: '/layout/messagePage'
         },
         {
           name: '审核管理',
@@ -89,11 +89,11 @@ export default {
           children: [
             {
               name: '一级审核',
-              path: '5-1'
+              path: '/layout/auditPage'
             },
             {
               name: '二级审核',
-              path: '5-2'
+              path: '/layout/reviewPage'
             }
           ]
         },
@@ -103,15 +103,15 @@ export default {
           children: [
             {
               name: '用户管理',
-              path: '/homePage/userManagementPage'
+              path: '/layout/userManagementPage'
             },
             {
               name: '角色管理',
-              path: '/homePage/roleManagementPage'
+              path: '/layout/roleManagementPage'
             },
             {
               name: '权限管理',
-              path: '/homePage/permissionManagementPage'
+              path: '/layout/permissionManagementPage'
             }
           ]
         }
