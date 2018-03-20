@@ -28,10 +28,7 @@
 </template>
 
 <script>
-import { loginByUsername } from '@/api/login'
-// import { cart } from './test'
-// import testAPI from './test'
-import axios from 'axios'
+import { login } from '@/api/login'
 
 export default {
   name: 'loginPage',
@@ -41,19 +38,14 @@ export default {
     }
   },
   created () {
-    var instance = axios.create({
-      baseURL: 'https://cnodejs.org/api/v1',
-      timeout: 5000
-    })
-    instance.get('/topics?type=share&limit=10').then(res => console.log(res))
     this.activeHeight = window.innerHeight - 120
   },
   methods: {
     login () {
-      loginByUsername().then(res => {
+      login().then(res => {
         console.log(res)
       })
-      this.$router.push({path: '/homePage'})
+      this.$router.push({path: '/layout/userManagementPage'})
     }
   }
 }
